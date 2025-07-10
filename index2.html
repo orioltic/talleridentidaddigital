@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infografía: Tu Huella Digital Profesional</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 320px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 400px;
+            }
+        }
+        .flowchart-step {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .flowchart-step:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .stat-card {
+             background-color: #0a9396;
+             color: white;
+        }
+        .binary-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+            opacity: 0.05;
+            font-family: 'monospace';
+            font-size: 1.5rem;
+            line-height: 1.2;
+            color: #005f73;
+            pointer-events: none;
+        }
+        .binary-background span {
+            display: inline-block;
+            white-space: pre;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <main class="container mx-auto p-4 md:p-8">
+        <header class="text-center mb-12 relative">
+            <div class="binary-background" id="binary-bg"></div>
+            <h1 class="text-5xl md:text-7xl font-black text-[#005f73] mb-4">Tu Huella Digital Importa 👣</h1>
+            <p class="text-2xl md:text-3xl text-[#0a9396] max-w-4xl mx-auto">Cómo la gestión de tu identidad online es clave para tu futuro profesional.</p>
+        </header>
+
+        <section id="problema" class="mb-16">
+            <div class="bg-white rounded-2xl shadow-lg p-6 md:p-10 text-center">
+                <h2 class="text-4xl font-bold text-[#005f73] mb-4">¿Por qué debería importarte? 🤔</h2>
+                <p class="text-xl mb-6 max-w-4xl mx-auto">
+                    En la era digital, cada interacción que realizas en línea contribuye a tu <strong>identidad digital</strong>. Para los estudiantes universitarios y futuros profesionales, esta huella es su nuevo currículum. Una buena gestión puede abrir puertas a oportunidades increíbles, mientras que una mala gestión puede cerrarlas. Este estudio investigó cómo los estudiantes perciben y manejan su presencia online.
+                </p>
+            </div>
+        </section>
+
+        <section id="metodologia" class="mb-16">
+            <h2 class="text-4xl font-bold text-center text-[#005f73] mb-8">¿Cómo se hizo el estudio? 🔬</h2>
+             <p class="text-xl text-center max-w-4xl mx-auto mb-10">Durante cuatro años, se realizó un taller para medir y mejorar las competencias digitales de los estudiantes. El proceso fue riguroso y se dividió en varias fases clave para asegurar un aprendizaje efectivo.</p>
+            <div class="flex flex-col md:flex-row items-center justify-center gap-4 text-center">
+                <div class="flowchart-step bg-white rounded-xl shadow-md p-6 w-full md:w-1/4">
+                    <div class="text-5xl mb-3">1️⃣</div>
+                    <h3 class="font-bold text-[#0a9396] text-xl">Análisis Inicial</h3>
+                    <p class="text-base">Cuestionario inicial para medir la percepción y actividad online de los estudiantes.</p>
+                </div>
+                <div class="hidden md:block text-4xl text-[#94d2bd] font-light">➡️</div>
+                <div class="flowchart-step bg-white rounded-xl shadow-md p-6 w-full md:w-1/4">
+                    <div class="text-5xl mb-2">2️⃣</div>
+                    <h3 class="font-bold text-[#0a9396] text-xl">Taller Práctico</h3>
+                    <p class="text-base">Sesión de 4 horas sobre autoanálisis de la huella digital y gestión profesional (LinkedIn, etc.).</p>
+                </div>
+                 <div class="hidden md:block text-4xl text-[#94d2bd] font-light">➡️</div>
+                <div class="flowchart-step bg-white rounded-xl shadow-md p-6 w-full md:w-1/4">
+                    <div class="text-5xl mb-2">3️⃣</div>
+                    <h3 class="font-bold text-[#0a9396] text-xl">Actividades</h3>
+                    <p class="text-base">Creación de un plan de identidad digital personal y evaluación entre compañeros.</p>
+                </div>
+                 <div class="hidden md:block text-4xl text-[#94d2bd] font-light">➡️</div>
+                <div class="flowchart-step bg-white rounded-xl shadow-md p-6 w-full md:w-1/4">
+                    <div class="text-5xl mb-2">4️⃣</div>
+                    <h3 class="font-bold text-[#0a9396] text-xl">Análisis Final</h3>
+                    <p class="text-base">Cuestionario final para evaluar el cambio en la percepción y las nuevas habilidades.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="resultados" class="mb-16">
+            <h2 class="text-4xl font-bold text-center text-[#005f73] mb-8">Resultados Clave: Un Cambio de Mentalidad 💡</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                
+                <div class="bg-white rounded-2xl shadow-lg p-6 md:p-8 flex flex-col justify-center items-center text-center">
+                    <h3 class="text-3xl font-bold text-[#005f73] mb-4">Aumento de la Conciencia</h3>
+                    <p class="text-xl mb-6">El taller cambió drásticamente la percepción de los estudiantes. Antes, muchos no veían la conexión entre sus redes sociales y su futuro laboral. Después, la mayoría comprendió que su perfil online es una herramienta profesional.</p>
+                    <div class="chart-container">
+                        <canvas id="concienciaChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-lg p-6 md:p-8 flex flex-col justify-center items-center text-center">
+                    <h3 class="text-3xl font-bold text-[#005f73] mb-4">Disposición a la Acción</h3>
+                     <p class="text-xl mb-6">La conciencia se tradujo en una mayor voluntad de gestionar activamente su identidad. Más de la mitad de los participantes se mostraron dispuestos a adoptar prácticas más profesionales en la red.</p>
+                    <div class="chart-container">
+                        <canvas id="gestionChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="md:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-8 text-center">
+                    <div class="stat-card rounded-2xl shadow-lg p-8 flex flex-col justify-center">
+                         <p class="text-6xl font-black text-white"> &gt;60% 💼</p>
+                         <p class="mt-2 text-xl text-white">cree que las empresas prefieren contratar a gente con un "CV Digital" sólido tras el taller.</p>
+                    </div>
+                    <div class="stat-card rounded-2xl shadow-lg p-8 flex flex-col justify-center">
+                        <p class="text-6xl font-black text-white">IMPACTO ✨</p>
+                        <p class="mt-2 text-xl text-white">El mayor cambio se vio en estudiantes que <span class="font-bold">no creaban contenido</span> antes, demostrando la necesidad de esta formación.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="conclusion" class="my-16">
+            <div class="bg-white rounded-2xl shadow-lg p-10 text-center">
+                <h2 class="text-4xl font-bold text-[#005f73] mb-4">El Mensaje Final: ¡Toma el Control! 🚀</h2>
+                <p class="text-xl mb-6 max-w-4xl mx-auto">
+                    Este estudio demuestra que la formación específica en identidad digital es <span class="font-bold text-[#ee9b00]">esencial y efectiva</span>. Tu presencia online es una extensión de quién eres profesionalmente. No es solo para el ocio, es una herramienta poderosa para tu carrera.
+                </p>
+                <p class="font-bold text-2xl text-[#0a9396]">¡Empieza a construir y gestionar tu marca personal hoy mismo! ¡Aprovecha la red de forma inteligente y responsable!</p>
+            </div>
+        </section>
+
+    </main>
+    
+    <footer class="text-center p-6 mt-10 bg-[#005f73] text-gray-200">
+        <p class="font-bold text-lg">Referencia del Estudio:</p>
+        <p class="text-base max-w-3xl mx-auto mb-2 italic">
+            Borrás-Gené, O., Serrano-Luján, L., & Montes Díez, R. (2022). Professional and Academic Digital Identity Workshop for Higher Education Students. <i>Information</i>, <i>13</i>(10), 490.
+        </p>
+        <p class="mt-4">
+            <span class="font-semibold">DOI:</span> <a href="https://doi.org/10.3390/info13100490" target="_blank" rel="noopener noreferrer" class="text-[#94d2bd] hover:text-[#e9d8a6] transition-colors font-mono text-base">10.3390/info13100490</a>
+        </p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            function wrapText(str, maxWidth) {
+                if (str.length <= maxWidth) {
+                    return str;
+                }
+                const words = str.split(' ');
+                let lines = [];
+                let currentLine = '';
+                for (const word of words) {
+                    if ((currentLine + ' ' + word).trim().length > maxWidth && currentLine.length > 0) {
+                        lines.push(currentLine);
+                        currentLine = word;
+                    } else {
+                        currentLine = (currentLine + ' ' + word).trim();
+                    }
+                }
+                if (currentLine.length > 0) {
+                    lines.push(currentLine);
+                }
+                return lines;
+            }
+
+            const sharedTooltipOptions = {
+                plugins: {
+                    tooltip: {
+                        callbacks: {
+                            title: function(tooltipItems) {
+                                const item = tooltipItems[0];
+                                let label = item.chart.data.labels[item.dataIndex];
+                                if (Array.isArray(label)) {
+                                    return label.join(' ');
+                                }
+                                return label;
+                            }
+                        }
+                    }
+                }
+            };
+            
+            // Chart.js - Bar Chart
+            const concienciaCtx = document.getElementById('concienciaChart').getContext('2d');
+            new Chart(concienciaCtx, {
+                type: 'bar',
+                data: {
+                    labels: [
+                        wrapText('Mi actividad en redes condiciona mi imagen', 20), 
+                        wrapText('Mi actividad en redes influirá en mi futuro profesional', 20)
+                    ],
+                    datasets: [{
+                        label: '% de estudiantes con cambio positivo',
+                        data: [63.2, 61.7],
+                        backgroundColor: ['#0a9396', '#94d2bd'],
+                        borderColor: ['#005f73', '#0a9396'],
+                        borderWidth: 2,
+                        borderRadius: 5,
+                    }]
+                },
+                options: {
+                    ...sharedTooltipOptions,
+                    maintainAspectRatio: false,
+                    indexAxis: 'y', // Horizontal bars
+                    scales: {
+                        x: {
+                            beginAtZero: true,
+                            max: 100,
+                            ticks: {
+                                callback: function(value) {
+                                    return value + '%'
+                                }
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        title: {
+                            display: true,
+                            text: '% de estudiantes con cambio positivo de opinión',
+                            padding: {
+                                top: 10,
+                                bottom: 20
+                            },
+                            font: {
+                                size: 16,
+                                weight: 'bold'
+                            }
+                        }
+                    }
+                }
+            });
+
+            // Chart.js - Doughnut Chart
+            const gestionCtx = document.getElementById('gestionChart').getContext('2d');
+            new Chart(gestionCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: [
+                        'Dispuesto a compartir trabajos', 
+                        'Dispuesto a usar grupos profesionales',
+                        'Interesado en crear un blog'
+                    ],
+                    datasets: [{
+                        label: 'Disposición a la acción',
+                        data: [55, 52, 47],
+                        backgroundColor: ['#ee9b00', '#ca6702', '#bb3e03', '#9b2226'],
+                        hoverBackgroundColor: ['#ffb703', '#fb8500', '#ae2012', '#9b2226'],
+                        borderColor: '#fff',
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    ...sharedTooltipOptions,
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                            align: 'center',
+                            labels: {
+                                boxWidth: 15,
+                                padding: 15,
+                                font: {
+                                    size: 14,
+                                }
+                            }
+                        },
+                        title: {
+                            display: true,
+                            text: 'Acciones que los estudiantes considerarían',
+                            padding: {
+                                top: 20,
+                                bottom: 10
+                            },
+                            font: {
+                                size: 16,
+                                weight: 'bold'
+                            }
+                        }
+                    }
+                }
+            });
+
+            // Binary background effect
+            const binaryBg = document.getElementById('binary-bg');
+            if (binaryBg) {
+                let binaryString = '';
+                for (let i = 0; i < 2000; i++) { 
+                    binaryString += Math.round(Math.random());
+                }
+                binaryBg.textContent = binaryString;
+            }
+
+        });
+    </script>
+</body>
+</html>
